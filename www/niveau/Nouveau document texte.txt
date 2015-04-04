@@ -1,0 +1,21 @@
+				var serieA = document.getElementById('serieA');
+				var repA = document.getElementById('repA');
+				var serieB = document.getElementById('serieB');
+				var repB = document.getElementById('repB');
+				var serieC = document.getElementById('serieC');
+				var repC = document.getElementById('repC');
+				var serieA1 = document.getElementById('serieA1');
+				var repA1 = document.getElementById('repA1');
+				var sa = ["serieA", serieA];
+				var ra = ["repA", repA];
+				var sb = ["serieB", serieB];
+				var rb = ["repB", repB];
+				var sc = ["serieC", serieC];
+				var rc = ["repC", repC];
+				var sa1 = ["serieA1", serie1A];
+				var ra1 = ["repA1", repA1];
+				var a = [sa, ra, sb, rb, sc, rc, sa1, ra1];
+				localStorage.setItem("Sceance 1", JSON.stringify(a));
+				var b = JSON.parse(localStorage.getItem("Sceance 1"));
+				window.alert('josn');
+				
