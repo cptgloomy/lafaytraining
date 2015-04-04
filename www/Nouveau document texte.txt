@@ -1,0 +1,9 @@
+<script>
+					function historique() {
+			  		var nombre = JSON.parse(localStorage.getItem("nbr"));
+					window.alert(nombre);
+						for(var i =1; i<= 10; i++){
+							  $('#historique_content').append($('<div/>', { id: 'r' + i, 'class' : 'ansbox'}))
+							}
+					}
+				</script>

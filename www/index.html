@@ -37,6 +37,8 @@
         <link  href="niveau/niveau7.html" />
         <link  href="niveau/niveau8.html" />
         <title>LAFAY</title>
+        <script src="js/jquery.js"></script>
+        
         <script>
 			function bShowHide_introduction(elemID)
 		{
@@ -69,9 +71,12 @@
 			e.style.display = dStyle;
 		}
 		</script>
+        
+        
     </head>
     <body>
-		<div id="home"> </div>
+		<div id="home"> 
+         </div>
 		<div id="page">
         
             <div id="introduction_titre" class="titre"> 
@@ -91,35 +96,35 @@
             </div>
             <div id="line1" class="ligne"> </div>
             <div  id="commencer_content" class="content">
-                <a href="niveau/niveau1.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau1.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 1
                 </a>
                 <div id="line1" class="ligne"> </div>
-                <a href="niveau/niveau2.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau2.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 2
                 </a>
                 <div id="line1" class="ligne"> </div>
-                <a href="niveau/niveau3.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau3.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 3
                 </a>
                 <div id="line1" class="ligne"> </div>
-                <a href="niveau/niveau4.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau4.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 4
                 </a>
                 <div id="line1" class="ligne"> </div>
-                <a href="niveau/niveau5.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau5.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 5
                 </a>
                 <div id="line1" class="ligne"> </div>
-                <a href="niveau/niveau6.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau6.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 6
                 </a>
                 <div id="line1" class="ligne"> </div>
-                <a href="niveau/niveau7.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau7.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 7
                 </a>
                 <div id="line1" class="ligne"> </div>
-                <a href="niveau/niveau8.html" style="text-decoration:none; color:blue; display:block;width:100%;height:100%;">
+                <a href="niveau/niveau8.html" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
                 	NIVEAU 8
                 </a>
                 <div id="line1" class="ligne"> </div>
@@ -133,9 +138,29 @@
             </div>
             <div id="line1" class="ligne"> </div>
             <div  id="historique_content" class="content">
-               <p>hey you</p>
             </div>
             
         </div>
+       <script>
+		
+		
+				localStorage.setItem("nbr", 3);
+				d = new Date();
+				date = d.toLocaleDateString()
+				var a = ["Séance n°1 le", date, " \n Exercice A : 5 séries de 4 répétiions \n Exercice B : 6 séries de 2 répétitions \n Exercice C : 2 séries de 1 répétitions"];
+				localStorage.setItem("Sceance "+1, JSON.stringify(a));
+				localStorage.setItem("Sceance "+2, JSON.stringify(a));
+				localStorage.setItem("Sceance "+3, JSON.stringify(a));
+				var b = JSON.parse(localStorage.getItem("Sceance "+1));
+				var e = JSON.parse(localStorage.getItem("Sceance "+2));
+				var f = JSON.parse(localStorage.getItem("Sceance "+3));
+				var g = JSON.parse(localStorage.getItem("nbr"));
+				for (i=1;i<=g; i++){
+					var session = JSON.parse(localStorage.getItem("Sceance "+i));
+					jQuery('#historique_content').append('<div  id="seance'+i+'" class="seance" onclick="alert(session);" style="text-decoration:none; color:white; display:block; " >Séance '+i+' le '+session[1]+'</div> ');
+					
+				}
+				                     
+					</script>
     </body>
 </html>

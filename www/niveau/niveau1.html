@@ -43,19 +43,16 @@
 				repC = repC.innerHTML;
 				serieA1 = serieA1.innerHTML;
 				repA1 = repA1.innerHTML;
-				var sa = ["serie A:", serieA];
-				var ra = ["repétitions A:", repA];
-				var sb = ["serie B:", serieB];
-				var rb = ["repétitions B", repB];
-				var sc = ["serie C:", serieC];
-				var rc = ["repétitions C:", repC];
-				var sa1 = ["serie A1:", serieA1];
-				var ra1 = ["repétitionsA1:", repA1];
 				var nombre = JSON.parse(localStorage.getItem("nbr"))
 				nombre++;
 				d = new Date();
 				date = d.toLocaleDateString()
-				var a = [date, nombre, sa, ra, sb, rb, sc, rc, sa1, ra1];
+				var a = ["Séance n°"+nombre+" le ", date, "\n Exercice A : "+serieA+" Séries de "+repA+" Répétitions"
+														 +"\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"
+														 +"\n Exercice C : "+serieC+" Séries de "+repC+" Répétitions"
+														 +"\n Exercice A1 : "+serieA1+" Séries de "+repA1+" Répétitions"
+
+						];
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
