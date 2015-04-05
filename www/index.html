@@ -93,8 +93,9 @@
                  </a>
             </div>
             <div id="line1" class="ligne"> </div>
-            <div  id="introduction_content" class="content">
-                <p>bienvenue blablablala</p>
+            <div  id="introduction_content" class="intro">
+                <div style="padding:2% 10%;"><p>Bienvenue et merci d'utiliser cette application Carnet Lafay.<br> Cette application  est destinée à vous accompagner pendant votre progression.<br> Elle ne remplace pas le livre mais se base sur les exercices par niveau et vous permet de suivre simplement vos scéances et de toujours les garder en mémoire. <br> Vous pouvez, à chaque scéance, indiquer vos résultats (répétitions et séries par exercice) et les sauvegarder.<br></p>
+                </div>
             </div>
             
              <div id="commencer_titre" class="titre"> 
@@ -193,14 +194,16 @@
 				//var e = JSON.parse(localStorage.getItem("Sceance "+2));
 				//var f = JSON.parse(localStorage.getItem("Sceance "+3));
 				var g = JSON.parse(localStorage.getItem("nbr"));
+				if (g<1){
+					jQuery('#historique_content').append('<div class="niveaucontent" style="text-decoration:none; color:white; display:block; " >Pas encore de séance en mémoire !</div> ');}
+				else{
 				for (i=1;i<=g; i++){
 					var session = JSON.parse(localStorage.getItem("Sceance "+i));
 					jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontent" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:block; " >Séance '+i+' le '+session[1]+'</div> ');
 					if (i<g){
 					jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
-					}
+					}}}
 					
-				}
 				                     
 					</script>
     </body>

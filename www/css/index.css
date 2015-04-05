@@ -93,7 +93,18 @@ body {
 	
 }
 
+.intro{top:0px;
+	margin:0px;
+	text-align: justify;
+	color: white;
+	text-shadow: 0.2em 0.2em 0.1em black;
+	background-color: black;
+	text-align: center;
+	box-shadow: -2px 4px 20px 6px black inset;
+	display: none;
+	max-width:100%;font-size:2em;}
+
 .niveaucontent{
-	padding:20px;
+	padding: 20px 0px;
 	font-size:2em;
 }

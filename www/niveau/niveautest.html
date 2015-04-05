@@ -29,9 +29,9 @@
         <link rel="stylesheet" type="text/css" href="niveau.css"/>
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <script type="text/javascript" src="phonegap.js"></script>
-        <!--<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />-->
-        <script src="js/jquery.js"></script>
-		<!--<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+        
         <script type="text/javascript">
 			function submitForm() {
 				serieA = serieA.innerHTML;
@@ -51,82 +51,93 @@
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
 				//window.alert(b);
-				document.location.href = 'niveau2.html';
+				
 			
 				}
+			function returnhome() {
+				document.location.href = '../index.html';
+			}
 			</script>
-        <title>NIVEAU 1</title>
+        <title>NIVEAU TEST</title>
     </head>
     <body>
-    <h1 id="titre"> Niveau Test </h1>
-    <div id="centreniveau">
-    <form method="POST" onSubmit="return submitForm()" data-ajax="false">
-    <table class="center" cellpadding="2"><br>
-   				<tr>
-       				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
-       				<td colspan="2">REPETITIONS</td>
-                    <td>RECUP</td>
-   				</tr>
-                <tr>
-       				<td>A</td>
-       				<td><span id="serieA">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieA');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieA');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-       				<td><span id="repA">0</span></td>
-                    <td><a href="" onclick="increase('repA');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repA');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
-   				</tr>
-               <tr>
-       				<td>B</td>
-       				<td><span id="serieB">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-       				<td><span id="repB">0</span></td>
-                    <td><a href="" onclick="increase('repB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
-   				</tr>
-                <tr>
-       				<td>C</td>
-       				<td><span id="serieC">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieC');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieC');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-       				<td><span id="repC">0</span></td>
-                    <td><a href="" onclick="increase('repC');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repC');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
-   				</tr>
-                <tr>
-       				<td>A1</td>
-       				<td><span id="serieA1">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieA1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieA1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-       				<td><span id="repA1">0</span></td>
-                    <td><a href="" onclick="increase('repA1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repA1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
-   				</tr>
+    	<div>
+  			<h1 id="titre" > Niveau Test </h1>
+   		</div>
+    	<div class="centreniveau">
+            <form method="POST" onSubmit="return submitForm()" >
+                <table class="center" cellpadding="2"><br>
+                            <tr>
+                                <td>EXERCICE</td>
+                                <td colspan="2">SERIES</td>
+                                <td colspan="2">REPETITIONS</td>
+                                <td>RECUP</td>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td><span id="serieA">0</span>/1</td>
+                                <td><div href="" onclick="increase('serieA');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('serieA');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td><span id="repA">0</span></td>
+                                <td><div href="" onclick="increase('repA');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('repA');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td>3"00</td>
+                            </tr>
+                           <tr>
+                                <td>B</td>
+                                <td><span id="serieB">0</span>/1</td>
+                                <td><div href="" onclick="increase('serieB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('serieB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td><span id="repB">0</span></td>
+                                <td><div href="" onclick="increase('repB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('repB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td>3"00</td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td><span id="serieC">0</span>/1</td>
+                                <td><div href="" onclick="increase('serieC');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('serieC');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td><span id="repC">0</span></td>
+                                <td><div href="" onclick="increase('repC');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('repC');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td>3"00</td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td><span id="serieA1">0</span>/1</td>
+                                <td><div href="" onclick="increase('serieA1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('serieA1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td><span id="repA1">0</span></td>
+                                <td><div href="" onclick="increase('repA1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                                <div href="" onclick="decrease('repA1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                                <td>3"00</td>
+                            </tr>
+                            
+                </table>
                 
-    </table>
-    <input type="Submit" value="Finir la scéance et sauvegarder" >
-    </form>
+            	<input type="Submit" value="Finir la scéance et sauvegarder" >
+            </form>
+            
+            <form>
+            <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
+            </form>
     </div>
     <script>
 		function increase(idelem) {
-    var serieA = document.getElementById(idelem);
-    var number = serieA.innerHTML;
-    number++;
-    serieA.innerHTML = number;
-	
-}
-		function decrease(idelem) {
-    var serieA = document.getElementById(idelem);
-    var number = serieA.innerHTML;
-    number--;
-    serieA.innerHTML = number;
-}
+			var serieA = document.getElementById(idelem);
+			var number = serieA.innerHTML;
+			number++;
+			serieA.innerHTML = number;
+			
+		}
+				function decrease(idelem) {
+			var serieA = document.getElementById(idelem);
+			var number = serieA.innerHTML;
+			number--;
+			serieA.innerHTML = number;
+		}
 	</script>
+    	
     </body>
 </html>

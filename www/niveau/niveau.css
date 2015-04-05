@@ -10,7 +10,7 @@ td
 {
     border: 1px solid black;
 }
-#centreniveau {
+.centreniveau {
 	max-width:100%;
 	margin:auto auto;
 	background-image:url(img/retina_wood.png);
