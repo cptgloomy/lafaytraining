@@ -83,6 +83,7 @@
     </head>
     <body>
 		<div id="home"> 
+        CARNET <br>LAFAY>
          </div>
 		<div id="page">
         
@@ -179,20 +180,22 @@
        <script>
 		
 		
-				//localStorage.setItem("nbr", 3);
-				//d = new Date();
-			//	date = d.toLocaleDateString()
-			//	var a = ["Séance n°1 le", date, " \n Exercice A : 5 séries de 4 répétiions \n Exercice B : 6 séries de 2 répétitions \n Exercice C : 2 séries de 1 répétitions"];
-				//localStorage.setItem("Sceance "+1, JSON.stringify(a));
-				//localStorage.setItem("Sceance "+2, JSON.stringify(a));
-				//localStorage.setItem("Sceance "+3, JSON.stringify(a));
-				//var b = JSON.parse(localStorage.getItem("Sceance "+1));
-				//var e = JSON.parse(localStorage.getItem("Sceance "+2));
-				//var f = JSON.parse(localStorage.getItem("Sceance "+3));
+				localStorage.setItem("nbr", 3);
+				d = new Date();
+				date = d.toLocaleDateString()
+				var a = ["Séance n°1 le", date, " \\n Exercice A : 5 séries de 4 répétiions \\n Exercice B : 6 séries de 2 répétitions \\n Exercice C : 2 séries de 1 répétitions"];
+				var b = ["Séance n°2 le", date, " \\n Exercice A : 5 séries de 4 répétiions \\n Exercice B : 6 séries de 2 répétitions \\n Exercice C : 2 séries de 1 répétitions"];
+				var c = ["Séance n°3 le", date, " \\n Exercice A : 5 séries de 4 répétiions \\n Exercice B : 6 séries de 2 répétitions \\n Exercice C : 2 séries de 1 répétitions"];
+				localStorage.setItem("Sceance "+1, JSON.stringify(a));
+				localStorage.setItem("Sceance "+2, JSON.stringify(b));
+				localStorage.setItem("Sceance "+3, JSON.stringify(c));
+				var b = JSON.parse(localStorage.getItem("Sceance "+1));
+				var e = JSON.parse(localStorage.getItem("Sceance "+2));
+				var f = JSON.parse(localStorage.getItem("Sceance "+3));
 				var g = JSON.parse(localStorage.getItem("nbr"));
 				for (i=1;i<=g; i++){
 					var session = JSON.parse(localStorage.getItem("Sceance "+i));
-					jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontent" onclick="alert(session);" style="text-decoration:none; color:white; display:block; " >Séance '+i+' le '+session[1]+'</div> ');
+					jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontent" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:block; " >Séance '+i+' le '+session[1]+'</div> ');
 					if (i<g){
 					jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
 					}

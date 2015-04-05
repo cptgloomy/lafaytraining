@@ -43,6 +43,8 @@ body {
 	box-shadow: 0.1em 0.1em 0.1em black;
 	z-index: 1;
 	top: 0px;
+	font-size:4em;
+	font-family: 'Oswald', sans-serif;
 }
 #page {
 	position:absolute;
@@ -55,7 +57,7 @@ body {
 }
 .titre {
 	text-align: center;
-	font-size: 2em;
+	font-size: 3em;
 	height:10%;
 	margin:0px;
 	padding:0px;
@@ -91,6 +93,6 @@ body {
 }
 
 .niveaucontent{
-	padding:10px;
-	font-size:1.5em;
+	padding:20px;
+	font-size:2em;
 }

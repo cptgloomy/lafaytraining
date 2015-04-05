@@ -661,7 +661,7 @@ var i,
 	// Regular expressions
 
 	// Whitespace characters http://www.w3.org/TR/css3-selectors/#whitespace
-	whitespace = "[\\x20\\t\\r\\n\\f]",
+	whitespace = "[\\x20\\t\\r\\\n\\f]",
 	// http://www.w3.org/TR/css3-syntax/#characters
 	characterEncoding = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
 
@@ -8310,7 +8310,7 @@ if ( !support.enctype ) {
 
 
 
-var rclass = /[\t\r\n\f]/g;
+var rclass = /[\t\r\\n\f]/g;
 
 jQuery.fn.extend({
 	addClass: function( value ) {
@@ -8505,7 +8505,7 @@ var rquery = (/\?/);
 
 
 
-var rvalidtokens = /(,)|(\[|{)|(}|])|"(?:[^"\\\r\n]|\\["\\\/bfnrt]|\\u[\da-fA-F]{4})*"\s*:?|true|false|null|-?(?!0\d)\d+(?:\.\d+|)(?:[eE][+-]?\d+|)/g;
+var rvalidtokens = /(,)|(\[|{)|(}|])|"(?:[^"\\\r\\n]|\\["\\\/bfnrt]|\\u[\da-fA-F]{4})*"\s*:?|true|false|null|-?(?!0\d)\d+(?:\.\d+|)(?:[eE][+-]?\d+|)/g;
 
 jQuery.parseJSON = function( data ) {
 	// Attempt to parse using the native JSON parser first
@@ -8582,7 +8582,7 @@ var
 
 	rhash = /#.*$/,
 	rts = /([?&])_=[^&]*/,
-	rheaders = /^(.*?):[ \t]*([^\r\n]*)\r?$/mg, // IE leaves an \r character at EOL
+	rheaders = /^(.*?):[ \t]*([^\r\\n]*)\r?$/mg, // IE leaves an \r character at EOL
 	// #7653, #8125, #8152: local protocol detection
 	rlocalProtocol = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
 	rnoContent = /^(?:GET|HEAD)$/,
@@ -9461,7 +9461,7 @@ jQuery.expr.filters.visible = function( elem ) {
 
 var r20 = /%20/g,
 	rbracket = /\[\]$/,
-	rCRLF = /\r?\n/g,
+	rCRLF = /\r?\\n/g,
 	rsubmitterTypes = /^(?:submit|button|image|reset|file)$/i,
 	rsubmittable = /^(?:input|select|textarea|keygen)/i;
 
@@ -9552,9 +9552,9 @@ jQuery.fn.extend({
 				null :
 				jQuery.isArray( val ) ?
 					jQuery.map( val, function( val ) {
-						return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
+						return { name: elem.name, value: val.replace( rCRLF, "\r\\n" ) };
 					}) :
-					{ name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
+					{ name: elem.name, value: val.replace( rCRLF, "\r\\n" ) };
 		}).get();
 	}
 });
