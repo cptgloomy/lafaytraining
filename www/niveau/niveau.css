@@ -14,8 +14,24 @@ td
 #centreniveau {
 	max-width:100%;
 	margin:auto auto;
+	background-image:url(img/retina_wood.png);
+	font-size:1.5em;
+	font-family: 'Oswald', sans-serif;
+	
 }
 body{
 	width: 100%;
 	text-align:center;
+	background-image:url(img/retina_wood.png);
+	height:100%;
 }
+
+h1{
+	background-image:url(img/retina_wood.png);
+	font-family: 'Oswald', sans-serif;
+	}
+
+html{	
+		height:100%;
+		background-image:url(img/retina_wood.png);
+		}

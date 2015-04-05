@@ -19,17 +19,6 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
-
-.seance{
-	width:100%;
-	background-color:green;
-	position:relative;
-	text-align: center;
-	font-size: 2em;
-	height:10%;
-	margin:0px;
-	padding:0px;
-}
 html {
 	height: 100%;
 }
@@ -39,6 +28,7 @@ body {
 	background-image:url(../img/fond.png);
 	background-size:cover;
 	max-height:100%;
+	font-family: 'Oswald', sans-serif;
 }
 #home {
 	position: absolute;
@@ -72,16 +62,23 @@ body {
 }
 .ligne {
 	position:relative;
-	height: 0.5%;
+	height: 0.2%;
 	background-color: silver;
 	width: 95%;
-	margin:auto;
+	margin:auto auto;
+	
+}
+.lignecontent {
+	position:relative;
+	height: 2px;
+	background-color: silver;
+	width: 80%;
+	margin:auto auto;
 	
 }
 .content {
 	top:0px;
 	margin:0px;
-	padding:0px;
 	text-align: justify;
 	color: white;
 	text-shadow: 0.2em 0.2em 0.1em black;
@@ -91,4 +88,9 @@ body {
 	display: none;
 	max-width:100%;
 	
+}
+
+.niveaucontent{
+	padding:10px;
+	font-size:1.5em;
 }
