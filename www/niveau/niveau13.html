@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="niveau.css"/>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+        <script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+        
+        
+        <script type="text/javascript">
+			function submitForm() {
+				serieA = serieA.innerHTML;
+				repA = repA.innerHTML;
+				serieB = serieB.innerHTML;
+				repB = repB.innerHTML;
+				serieC = serieC.innerHTML;
+				repC = repC.innerHTML;
+				serieA1 = serieA1.innerHTML;
+				repA1 = repA1.innerHTML;
+				var nombre = JSON.parse(localStorage.getItem("nbr"))
+				nombre++;
+				d = new Date();
+				date = d.toLocaleDateString()
+				var a = ["Séance n°"+nombre+" le ", date, "\n Exercice A : "+serieA+" Séries de "+repA+" Répétitions"
+														 +"\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"
+														 +"\n Exercice C : "+serieC+" Séries de "+repC+" Répétitions"
+														 +"\n Exercice A1 : "+serieA1+" Séries de "+repA1+" Répétitions"
+
+						];
+				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
+				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
+				localStorage.setItem("nbr", nombre);
+				window.alert(b);
+				}
+			</script>
+        <title>NIVEAU 1</title>
+    </head>
+    <body>
+    <h1 id="titre"> Niveau I </h1>
+    <div id="centreniveau">
+    <form method="POST" onSubmit="return submitForm()" data-ajax="false">
+    <table class="center" cellpadding="2"><br>
+   				<tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+                <tr>
+       				<td>A</td>
+       				<td><span id="serieA">0</span>/1</td>
+                    <td><a href="" onclick="increase('serieA');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('serieA');"><img src="img/minus.png" style="height:30px;"/></a></td>
+       				<td><span id="repA">0</span></td>
+                    <td><a href="" onclick="increase('repA');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('repA');"><img src="img/minus.png" style="height:30px;"/></a></td>
+                    <td>3"00</td>
+   				</tr>
+               <tr>
+       				<td>B</td>
+       				<td><span id="serieB">0</span>/1</td>
+                    <td><a href="" onclick="increase('serieB');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('serieB');"><img src="img/minus.png" style="height:30px;"/></a></td>
+       				<td><span id="repB">0</span></td>
+                    <td><a href="" onclick="increase('repB');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('repB');"><img src="img/minus.png" style="height:30px;"/></a></td>
+                    <td>3"00</td>
+   				</tr>
+                <tr>
+       				<td>C</td>
+       				<td><span id="serieC">0</span>/1</td>
+                    <td><a href="" onclick="increase('serieC');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('serieC');"><img src="img/minus.png" style="height:30px;"/></a></td>
+       				<td><span id="repC">0</span></td>
+                    <td><a href="" onclick="increase('repC');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('repC');"><img src="img/minus.png" style="height:30px;"/></a></td>
+                    <td>3"00</td>
+   				</tr>
+                <tr>
+       				<td>A1</td>
+       				<td><span id="serieA1">0</span>/1</td>
+                    <td><a href="" onclick="increase('serieA1');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('serieA1');"><img src="img/minus.png" style="height:30px;"/></a></td>
+       				<td><span id="repA1">0</span></td>
+                    <td><a href="" onclick="increase('repA1');"><img src="img/plus.png" style="height:30px;"/></a>
+                    <a href="" onclick="decrease('repA1');"><img src="img/minus.png" style="height:30px;"/></a></td>
+                    <td>3"00</td>
+   				</tr>
+                
+    </table>
+    <input type="Submit" value="Finir la scéance et sauvegarder" >
+    </form>
+    </div>
+    <script>
+		function increase(idelem) {
+    var serieA = document.getElementById(idelem);
+    var number = serieA.innerHTML;
+    number++;
+    serieA.innerHTML = number;
+	
+}
+		function decrease(idelem) {
+    var serieA = document.getElementById(idelem);
+    var number = serieA.innerHTML;
+    number--;
+    serieA.innerHTML = number;
+}
+	</script>
+    </body>
+</html>
