@@ -5,7 +5,6 @@ table.center {
 table
 {
     border-collapse: collapse;
-	font-size:1em;
 }
 td
 {
@@ -29,9 +28,5 @@ body{
 h1{
 	background-image:url(img/retina_wood.png);
 	font-family: 'Oswald', sans-serif;
+	font-size:3em;
 	}
-
-html{	
-		height:100%;
-		background-image:url(img/retina_wood.png);
-		}

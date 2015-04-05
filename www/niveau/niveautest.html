@@ -29,9 +29,9 @@
         <link rel="stylesheet" type="text/css" href="niveau.css"/>
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <script type="text/javascript" src="phonegap.js"></script>
-        <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+        <!--<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />-->
         <script src="js/jquery.js"></script>
-		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<!--<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
         <script type="text/javascript">
 			function submitForm() {
 				serieA = serieA.innerHTML;
@@ -50,7 +50,9 @@
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
-				window.alert(b);
+				//window.alert(b);
+				document.location.href = 'niveau2.html';
+			
 				}
 			</script>
         <title>NIVEAU 1</title>
