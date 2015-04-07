@@ -72,7 +72,7 @@
 				repK2 = repK2.innerHTML;
 				serieU = serieU.innerHTML;
 				repU = repU.innerHTML;
-				serieA12 = serieZ.innerHTML;
+				serieZ = serieZ.innerHTML;
 				repZ = repZ.innerHTML;
 				var nombre = JSON.parse(localStorage.getItem("nbr"))
 				nombre++;
@@ -82,7 +82,7 @@
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
-				window.alert(b);
+				//window.alert(b);
 				}
 			function returnhome() {
 				document.location.href = '../index.html';}
@@ -104,15 +104,16 @@
    				</tr>
                 <tr>
        				<td>N</td>
-       				<td><span id="serieN">0</span>/6</td>
+       				<td><span id="serieN">0</span>/5</td>
                     <td><div href="" onclick="increase('serieN');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieN');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repN">0</span></td>
                     <td><div href="" onclick="increase('repN');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repN');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>15"</td>
    			</tr>
         </table>
+        <div style="margin:auto auto;">recuperation : 1'00</div>
     <table class="center" cellpadding="10"><br>
    				<tr>
        				<td>EXERCICE</td>
@@ -122,16 +123,16 @@
    				</tr>
                 <tr>
        				<td>I7</td>
-       				<td><span id="serieI7">0</span>/6</td>
+       				<td><span id="serieI7">0</span>/3</td>
                     <td><div href="" onclick="increase('serieI7');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieI7');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repI7">0</span></td>
                     <td><div href="" onclick="increase('repI7');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repI7');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>45"</td>
    			</tr>
         </table>
-        <div style="margin:auto auto;">recuperation : 3'00</div>
+   
         <table class="center" cellpadding="10"><br>
    			<tr>
                <tr>
@@ -142,13 +143,13 @@
                     <td>RECUP</td>
    				</tr>
        				<td>I8</td>
-       				<td><span id="serieI8">0</span>/6</td>
+       				<td><span id="serieI8">0</span>/3</td>
                     <td><div href="" onclick="increase('serieI8');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieI8');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repI8">0</span></td>
                     <td><div href="" onclick="increase('repI8');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repI8');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>4'00</td>
+                    <td>45"</td>
    				</tr>
                 </table>
                 <table class="center" cellpadding="10"><br>
@@ -160,16 +161,15 @@
    				</tr>
                 <tr>
        				<td>C3</td>
-       				<td><span id="serieC3">0</span>/6</td>
+       				<td><span id="serieC3">0</span>/3</td>
                     <td><div href="" onclick="increase('serieC3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieC3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repC3">0</span></td>
                     <td><div href="" onclick="increase('repC3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repC3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>45"</td>
    			</tr>
         </table>
-        <div style="margin:auto auto;">recuperation : 3'00</div>
        
                 <table class="center" cellpadding="10"><br>
    			<tr>
@@ -187,7 +187,7 @@
        				<td><span id="repC4A10">0</span></td>
                     <td><div href="" onclick="increase('repC4A10');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repC4A10');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>2'00</td>
+                    <td>45"</td>
    				</tr>
                 </table>
                 <table class="center" cellpadding="10"><br>
@@ -206,7 +206,7 @@
        				<td><span id="repC4A11">0</span></td>
                     <td><div href="" onclick="increase('repC4A11');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repC4A11');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>2'00</td>
+                    <td>45"</td>
    				</tr>
                 </table>
                 <table class="center" cellpadding="10"><br>
@@ -225,7 +225,7 @@
        				<td><span id="repC4A7">0</span></td>
                     <td><div href="" onclick="increase('repC4A7');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repC4A7');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>2'00</td>
+                    <td>45"</td>
    				</tr>
                 </table>
                 <table class="center" cellpadding="10"><br>
@@ -244,7 +244,7 @@
        				<td><span id="repG">0</span></td>
                     <td><div href="" onclick="increase('repG');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repG');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>2'00</td>
+                    <td>3'00</td>
    				</tr>
                 </table>
               
@@ -260,16 +260,15 @@
                     <td>RECUP</td>
    				</tr>
        				<td>C7</td>
-       				<td><span id="serieC7">0</span>/4</td>
+       				<td><span id="serieC7">0</span>/1</td>
                     <td><div href="" onclick="increase('serieC7');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieC7');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repC7">0</span></td>
                     <td><div href="" onclick="increase('repC7');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repC7');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>1'00</td>
    				</tr>
                 </table>
-        <div style="margin:auto auto;">recuperation : 3'00</div>
         <table class="center" cellpadding="10"><br>
    			<tr>
                <tr>
@@ -280,16 +279,15 @@
                     <td>RECUP</td>
    				</tr>
        				<td>Q1</td>
-       				<td><span id="serieQ1">0</span>/6</td>
+       				<td><span id="serieQ1">0</span>/1</td>
                     <td><div href="" onclick="increase('serieQ1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieQ1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repQ1">0</span></td>
                     <td><div href="" onclick="increase('repQ1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repQ1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>1'00</td>
    				</tr>
                 </table>
-                <div style="margin:auto auto;">recuperation : 1'30</div>
                 <table class="center" cellpadding="10"><br>
    			<tr>
                <tr>
@@ -306,11 +304,10 @@
        				<td><span id="repC7b">0</span></td>
                     <td><div href="" onclick="increase('repC7b');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repC7b');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>1'00</td>
    				</tr>
                 </table>
-                <div style="margin:auto auto;">recuperation : 1'30</div>
-                <table class="center" cellpadding="10"><br>
+                                <table class="center" cellpadding="10"><br>
    			<tr>
                <tr>
                <tr>
@@ -320,37 +317,17 @@
                     <td>RECUP</td>
    				</tr>
        				<td>Q2</td>
-       				<td><span id="serieQ2">0</span>/6</td>
+       				<td><span id="serieQ2">0</span>/1</td>
                     <td><div href="" onclick="increase('serieQ2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieQ2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repQ2">0</span></td>
                     <td><div href="" onclick="increase('repQ2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repQ2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>3'00</td>
    				</tr>
                 </table>
-                <div style="margin:auto auto;">recuperation : 1'30</div>
         
-        <table class="center" cellpadding="10"><br>
-   			<tr>
-               <tr>
-               <tr>
-       				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
-       				<td colspan="2">REPETITIONS</td>
-                    <td>RECUP</td>
-   				</tr>
-       				<td>C3</td>
-       				<td><span id="serieC3">0</span>/3</td>
-                    <td><div href="" onclick="increase('serieC3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieC3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-       				<td><span id="repC3">0</span></td>
-                    <td><div href="" onclick="increase('repC3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('repC3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>1'00</td>
-   				</tr>
-                
-    </table>
+     
     <table class="center" cellpadding="10"><br>
    			<tr>
                <tr>
@@ -380,14 +357,14 @@
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
-       				<td>I5/td>
+       				<td>I5<td>
        				<td><span id="serieI5">0</span>/1</td>
                     <td><div href="" onclick="increase('serieI5');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('serieI5');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repI5">0</span></td>
                     <td><div href="" onclick="increase('repI5');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repI5');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'30</td>
    				</tr>
                 
     </table>
