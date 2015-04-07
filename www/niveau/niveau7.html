@@ -23,49 +23,71 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="niveau.css"/>
         <script type="text/javascript" src="phonegap.js"></script>
         <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
-        <script src="js/jquery.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
         
         
         <script type="text/javascript">
 			function submitForm() {
-				serieA = serieA.innerHTML;
-				repA = repA.innerHTML;
 				serieB = serieB.innerHTML;
 				repB = repB.innerHTML;
-				serieC = serieC.innerHTML;
-				repC = repC.innerHTML;
-				serieA1 = serieA1.innerHTML;
-				repA1 = repA1.innerHTML;
+				serieA3 = serieA3.innerHTML;
+				repA3 = repA3.innerHTML;
+				serieA2 = serieA2.innerHTML;
+				repA2 = repA2.innerHTML;
+				serieI1 = serieI1.innerHTML;
+				repI1 = repI1.innerHTML;
+				serieC3 = serieC3.innerHTML;
+				repC3 = repC3.innerHTML;
+				serieJ = serieJ.innerHTML;
+				repJ = repJ.innerHTML;
+				serieK = serieK.innerHTML;
+				repK = repK.innerHTML;
+				serieL = serieL.innerHTML;
+				repL = repL.innerHTML;
+				serieI4 = serieI4.innerHTML;
+				repI4 = repI4.innerHTML;
+				serieI5 = serieI5.innerHTML;
+				repI5 = repI5.innerHTML;
+				serieE2 = serieE2.innerHTML;
+				repE2 = repE2.innerHTML;
+				serieF = serieF.innerHTML;
+				repF = repF.innerHTML;
+				serieG = serieG.innerHTML;
+				repG = repG.innerHTML;
+				serieH = serieH.innerHTML;
+				repH = repH.innerHTML;
+				serieK2 = serieK2.innerHTML;
+				repK2 = repK2.innerHTML;
+				serieZ = serieZ.innerHTML;
+				repZ = repZ.innerHTML;
 				var nombre = JSON.parse(localStorage.getItem("nbr"))
 				nombre++;
 				d = new Date();
 				date = d.toLocaleDateString()
-				var a = ["Séance n°"+nombre+" le ", date, "\\n Exercice A : "+serieA+" Séries de "+repA+" Répétitions"
-														 +"\\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"
-														 +"\\n Exercice C : "+serieC+" Séries de "+repC+" Répétitions"
-														 +"\\n Exercice A1 : "+serieA1+" Séries de "+repA1+" Répétitions"
-
-						];
+				var a = ["Séance n°"+nombre+" Niveau VII le ", date, "\\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"+"\\n Exercice A3 : "+serieA3+" Séries de "+repA3+"\\n Exercice A2 : "+serieA2+" Séries de "+repA2+" Répétitions"+"\\n Exercice I1 : "+serieI1+" Séries de "+repI1+" Répétitions"+"\\n Exercice C3 : "+serieC3+" Séries de "+repC3+" Répétitions"+"\\n Exercice J : "+serieJ+" Séries de "+repJ+" Répétitions"+"\\n Exercice K : "+serieK+" Séries de "+repK+" Répétitions"+"\\n Exercice L : "+serieL+" Séries de "+repL+" Répétitions"+"\\n Exercice I4 : "+serieI4+" Séries de "+repI4+" Répétitions"+"\\n Exercice I5 : "+serieI5+" Séries de "+repI5+" Répétitions"+"\\n Exercice E2 : "+serieE2+" Séries de "+repE2+" Répétitions"+"\\n Exercice F : "+serieF+" Séries de "+repF+" Répétitions"+"\\n Exercice H : "+serieH+" Séries de "+repH+" Répétitions"+"\\n Exercice G : "+serieG+" Séries de "+repG+" Répétitions"+"\\n Exercice K2 : "+serieK2+" Séries de "+repK2+" Répétitions"+"\\n Exercice Z : "+serieZ+" Séries de "+repZ+" Répétitions"];
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
-				window.alert(b);
+				//window.alert(b);
 				}
+			function returnhome() {
+				document.location.href = '../index.html';}
 			</script>
-        <title>NIVEAU 1</title>
+        <title>NIVEAU 7</title>
     </head>
     <body>
-    <h1 id="titre"> Niveau I </h1>
-    <div id="centreniveau">
-    <form method="POST" onSubmit="return submitForm()" data-ajax="false">
-    <table class="center" cellpadding="2"><br>
+    <h1 id="titre"> Niveau VII</h1>
+    <div class="centreniveau">
+    <form method="POST" onSubmit="return submitForm()" >
+    <table class="center" cellpadding="10"><br>
    				<tr>
        				<td>EXERCICE</td>
        				<td colspan="2">SERIES</td>
@@ -73,49 +95,319 @@
                     <td>RECUP</td>
    				</tr>
                 <tr>
-       				<td>A</td>
-       				<td><span id="serieA">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieA');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieA');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-       				<td><span id="repA">0</span></td>
-                    <td><a href="" onclick="increase('repA');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repA');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
-   				</tr>
-               <tr>
        				<td>B</td>
-       				<td><span id="serieB">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
+       				<td><span id="serieB">0</span>/6</td>
+                    <td><div href="" onclick="increase('serieB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
        				<td><span id="repB">0</span></td>
-                    <td><a href="" onclick="increase('repB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
+                    <td><div href="" onclick="increase('repB');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repB');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   			</tr>
+        </table>
+        <div style="margin:auto auto;">recuperation : 25"</div>
+    <table class="center" cellpadding="10"><br>
+   				<tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
    				</tr>
                 <tr>
-       				<td>C</td>
-       				<td><span id="serieC">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieC');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieC');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-       				<td><span id="repC">0</span></td>
-                    <td><a href="" onclick="increase('repC');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repC');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
+       				<td>A3</td>
+       				<td><span id="serieA3">0</span>/6</td>
+                    <td><div href="" onclick="increase('serieA3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieA3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repA3">0</span></td>
+                    <td><div href="" onclick="increase('repA3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repA3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   			</tr>
+        </table>
+        <div style="margin:auto auto;">recuperation : 25"</div>
+        <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>A2</td>
+       				<td><span id="serieA2">0</span>/6</td>
+                    <td><div href="" onclick="increase('serieA2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieA2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repA2">0</span></td>
+                    <td><div href="" onclick="increase('repA2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repA2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   				</tr>
+                </table>
+                <div style="margin:auto auto;">recuperation : 4'00</div>
+                <table class="center" cellpadding="10"><br>
+   				<tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
    				</tr>
                 <tr>
-       				<td>A1</td>
-       				<td><span id="serieA1">0</span>/1</td>
-                    <td><a href="" onclick="increase('serieA1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('serieA1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-       				<td><span id="repA1">0</span></td>
-                    <td><a href="" onclick="increase('repA1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></a>
-                    <a href="" onclick="decrease('repA1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></a></td>
-                    <td>3"00</td>
+       				<td>I1</td>
+       				<td><span id="serieI1">0</span>/6</td>
+                    <td><div href="" onclick="increase('serieI1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieI1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repI1">0</span></td>
+                    <td><div href="" onclick="increase('repI1');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repI1');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   			</tr>
+        </table>
+        <div style="margin:auto auto;">recuperation : 25"</div>
+        <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>C3</td>
+       				<td><span id="serieC3">0</span>/6</td>
+                    <td><div href="" onclick="increase('serieC3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieC3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repC3">0</span></td>
+                    <td><div href="" onclick="increase('repC3');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repC3');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   				</tr>
+                </table>
+                <div style="margin:auto auto;">recuperation : 3'00</div>
+                <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>J</td>
+       				<td><span id="serieJ">0</span>/1</td>
+                    <td><div href="" onclick="increase('serieJ');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieJ');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repJ">0</span></td>
+                    <td><div href="" onclick="increase('repJ');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repJ');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>2'00</td>
+   				</tr>
+                </table>
+                <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>K</td>
+       				<td><span id="serieK">0</span>/1</td>
+                    <td><div href="" onclick="increase('serieK');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieK');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repK">0</span></td>
+                    <td><div href="" onclick="increase('repK');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repK');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>2'00</td>
+   				</tr>
+                </table>
+                <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>L</td>
+       				<td><span id="serieL">0</span>/1</td>
+                    <td><div href="" onclick="increase('serieL');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieL');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repL">0</span></td>
+                    <td><div href="" onclick="increase('repL');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repL');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>2'00</td>
+   				</tr>
+                </table>
+                <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>I4</td>
+       				<td><span id="serieI4">0</span>/1</td>
+                    <td><div href="" onclick="increase('serieI4');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieI4');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repI4">0</span></td>
+                    <td><div href="" onclick="increase('repI4');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repI4');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>2'00</td>
+   				</tr>
+                </table>
+                <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>I5</td>
+       				<td><span id="serieI5">0</span>/1</td>
+                    <td><div href="" onclick="increase('serieI5');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieI5');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repI5">0</span></td>
+                    <td><div href="" onclick="increase('repI5');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repI5');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>3'00</td>
+   				</tr>
+                </table>
+        <div style="margin:auto auto;">recuperation : 3'00</div>
+        <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>E2</td>
+       				<td><span id="serieE2">0</span>/6</td>
+
+                    <td><div href="" onclick="increase('serieE2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieE2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repE2">0</span></td>
+                    <td><div href="" onclick="increase('repE2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repE2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   				</tr>
+                </table>
+        <div style="margin:auto auto;">recuperation : 2'00</div>
+        <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>F</td>
+       				<td><span id="serieF">0</span>/4</td>
+                    <td><div href="" onclick="increase('serieF');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieF');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repF">0</span></td>
+                    <td><div href="" onclick="increase('repF');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repF');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   				</tr>
+                </table>
+        <div style="margin:auto auto;">recuperation : 3'00</div>
+        <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>G</td>
+       				<td><span id="serieG">0</span>/6</td>
+                    <td><div href="" onclick="increase('serieG');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieG');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repG">0</span></td>
+                    <td><div href="" onclick="increase('repG');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repG');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   				</tr>
+                </table>
+                <div style="margin:auto auto;">recuperation : 1'30</div>
+        <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>H</td>
+       				<td><span id="serieH">0</span>/6</td>
+                    <td><div href="" onclick="increase('serieH');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieH');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repH">0</span></td>
+                    <td><div href="" onclick="increase('repH');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repH');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>25"</td>
+   				</tr>
+                </table>
+        <div style="margin:auto auto;">recuperation : 1'00</div>
+        <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>K2</td>
+       				<td><span id="serieK2">0</span>/3</td>
+                    <td><div href="" onclick="increase('serieK2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieK2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repK2">0</span></td>
+                    <td><div href="" onclick="increase('repK2');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repK2');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>1'00</td>
    				</tr>
                 
     </table>
+    <table class="center" cellpadding="10"><br>
+   			<tr>
+               <tr>
+               <tr>
+       				<td>EXERCICE</td>
+       				<td colspan="2">SERIES</td>
+       				<td colspan="2">REPETITIONS</td>
+                    <td>RECUP</td>
+   				</tr>
+       				<td>Z</td>
+       				<td><span id="serieZ">0</span>/1</td>
+                    <td><div href="" onclick="increase('serieZ');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('serieZ');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+       				<td><span id="repZ">0</span></td>
+                    <td><div href="" onclick="increase('repZ');"><img src="img/plus.png" style="height:50px; padding:5px;"/></div>
+                    <div href="" onclick="decrease('repZ');"><img src="img/minus.png" style="height:50px; padding:5px;"/></div></td>
+                    <td>1'00</td>
+   				</tr>
+                
+    </table>
+    <br>
     <input type="Submit" value="Finir la scéance et sauvegarder" >
     </form>
+    <br>
+    <form>
+            <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
+            </form>
     </div>
     <script>
 		function increase(idelem) {
