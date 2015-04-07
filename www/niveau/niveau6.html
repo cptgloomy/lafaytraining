@@ -62,7 +62,7 @@
 				nombre++;
 				d = new Date();
 				date = d.toLocaleDateString()
-				var a = ["Séance n°"+nombre+" Niveau VI le ", date, "\\n Exercice B1 : "+serieB1+" Séries de "+repB1+" Répétitions"+"\\n Exercice A3 : "+serieA3+" Séries de "+repA3+"\\n Exercice A2 : "+serieA2+" Séries de "+repA2+" Répétitions"+"\\n Exercice I : "+serieI+" Séries de "+repI+" Répétitions"+"\\n Exercice C1 : "+serieC1+" Séries de "+repC1+" Répétitions"+"\\n Exercice E2 : "+serieE2+" Séries de "+repE2+" Répétitions"+"\\n Exercice F : "+serieF+" Séries de "+repF+" Répétitions"+"\\n Exercice H : "+serieH+" Séries de "+repH+" Répétitions"+"\\n Exercice G : "+serieG+" Séries de "+repG+" Répétitions"+"\\n Exercice K2 : "+serieK2+" Séries de "+repK2+" Répétitions"+"\\n Exercice Z : "+serieZ+" Séries de "+repZ+" Répétitions"];
+				var a = ["Séance n°"+nombre+" Niveau VI le ", date, "\\n Exercice B1 : "+serieB1+" Séries de "+repB1+" Répétitions"+"\\n Exercice A3 : "+serieA3+" Séries de "+repA3+"Répétitions"+"\\n Exercice A2 : "+serieA2+" Séries de "+repA2+" Répétitions"+"\\n Exercice I : "+serieI+" Séries de "+repI+" Répétitions"+"\\n Exercice C1 : "+serieC1+" Séries de "+repC1+" Répétitions"+"\\n Exercice E2 : "+serieE2+" Séries de "+repE2+" Répétitions"+"\\n Exercice F : "+serieF+" Séries de "+repF+" Répétitions"+"\\n Exercice H : "+serieH+" Séries de "+repH+" Répétitions"+"\\n Exercice G : "+serieG+" Séries de "+repG+" Répétitions"+"\\n Exercice K2 : "+serieK2+" Séries de "+repK2+" Répétitions"+"\\n Exercice Z : "+serieZ+" Séries de "+repZ+" Répétitions"];
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
@@ -74,7 +74,9 @@
         <title>NIVEAU 6</title>
     </head>
     <body>
-    <h1 id="titre"> Niveau VI</h1>
+    <h1 id="titre"> Niveau VI</h1><form>
+            <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
+            </form><br>
     <div class="centreniveau">
     <form method="POST" onSubmit="return submitForm()" >
     <table class="center" cellpadding="10"><br>
@@ -301,7 +303,7 @@
     <br>
     <form>
             <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
-            </form>
+            </form><br>
     </div>
     <script>
 		function increase(idelem) {

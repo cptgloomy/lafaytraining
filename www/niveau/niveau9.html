@@ -70,7 +70,7 @@
 				nombre++;
 				d = new Date();
 				date = d.toLocaleDateString()
-				var a = ["Séance n°"+nombre+" Niveau IX le ", date, "\\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"+"\\n Exercice A6 : "+serieA6+" Séries de "+repA6+"\\n Exercice A7 : "+serieA7+" Séries de "+repA7+" Répétitions"+"\\n Exercice I1 : "+serieI1+" Séries de "+repI1+" Répétitions"+"\\n Exercice C3 : "+serieC3+" Séries de "+repC3+" Répétitions"+"\\n Exercice J : "+serieJ+" Séries de "+repJ+" Répétitions"+"\\n Exercice K : "+serieK+" Séries de "+repK+" Répétitions"+"\\n Exercice L : "+serieL+" Séries de "+repL+" Répétitions"+"\\n Exercice B1 : "+serieB1+" Séries de "+repB1+" Répétitions"+"\\n Exercice M : "+serieM+" Séries de "+repM+" Répétitions"+"\\n Exercice F : "+serieF+" Séries de "+repF+" Répétitions"+"\\n Exercice H : "+serieH+" Séries de "+repH+" Répétitions"+"\\n Exercice G : "+serieG+" Séries de "+repG+" Répétitions"+"\\n Exercice K2 : "+serieK2+" Séries de "+repK2+" Répétitions"+"\\n Exercice Z : "+serieZ+" Séries de "+repZ+" Répétitions"];
+				var a = ["Séance n°"+nombre+" Niveau IX le ", date, "\\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"+"\\n Exercice A6 : "+serieA6+" Séries de "+repA6+" Répétitions"+"\\n Exercice A7 : "+serieA7+" Séries de "+repA7+" Répétitions"+"\\n Exercice I1 : "+serieI1+" Séries de "+repI1+" Répétitions"+"\\n Exercice C3 : "+serieC3+" Séries de "+repC3+" Répétitions"+"\\n Exercice J : "+serieJ+" Séries de "+repJ+" Répétitions"+"\\n Exercice K : "+serieK+" Séries de "+repK+" Répétitions"+"\\n Exercice L : "+serieL+" Séries de "+repL+" Répétitions"+"\\n Exercice B1 : "+serieB1+" Séries de "+repB1+" Répétitions"+"\\n Exercice M : "+serieM+" Séries de "+repM+" Répétitions"+"\\n Exercice F : "+serieF+" Séries de "+repF+" Répétitions"+"\\n Exercice H : "+serieH+" Séries de "+repH+" Répétitions"+"\\n Exercice G : "+serieG+" Séries de "+repG+" Répétitions"+"\\n Exercice K2 : "+serieK2+" Séries de "+repK2+" Répétitions"+"\\n Exercice Z : "+serieZ+" Séries de "+repZ+" Répétitions"];
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
@@ -82,7 +82,9 @@
         <title>NIVEAU 9</title>
     </head>
     <body>
-    <h1 id="titre"> Niveau IX</h1>
+    <h1 id="titre"> Niveau IX</h1><form>
+            <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
+            </form><br>
     <div class="centreniveau">
     <form method="POST" onSubmit="return submitForm()" >
     <table class="center" cellpadding="10"><br>
@@ -392,7 +394,7 @@
     <br>
     <form>
             <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
-            </form>
+            </form><br>
     </div>
     <script>
 		function increase(idelem) {

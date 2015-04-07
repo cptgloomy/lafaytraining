@@ -25,7 +25,7 @@ html {
 body {
 
 	margin: 0px;
-	background-image:url(../img/fond.png);
+	background-color:#4F8261;
 	background-size:cover;
 	max-height:100%;
 	font-family: 'Oswald', sans-serif;
@@ -35,11 +35,10 @@ body {
 	position: absolute;
 	margin: 0px;
 	height: 30%;
-	background-color:#039;
 	width: 100%;
 	border-bottom: solid black 1px;
 	background-size: cover;
-	background-image:url(../img/fond.png);
+	background-color:#A5C276;
 	box-shadow: 0.1em 0.1em 0.1em black;
 	z-index: 1;
 	top: 0px;
@@ -85,7 +84,7 @@ body {
 	text-align: justify;
 	color: white;
 	text-shadow: 0.2em 0.2em 0.1em black;
-	background-color: black;
+	background-color: #234D54;
 	text-align: center;
 	box-shadow: -2px 4px 20px 6px black inset;
 	display: none;
@@ -98,7 +97,7 @@ body {
 	text-align: justify;
 	color: white;
 	text-shadow: 0.2em 0.2em 0.1em black;
-	background-color: black;
+	background-color: #234D54;
 	text-align: center;
 	box-shadow: -2px 4px 20px 6px black inset;
 	display: none;

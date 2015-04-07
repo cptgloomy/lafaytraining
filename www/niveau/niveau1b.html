@@ -60,7 +60,7 @@
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
-				window.alert(b);
+				//window.alert(b);
 				}
 			function returnhome() {
 				document.location.href = '../index.html';}
@@ -69,6 +69,9 @@
     </head>
     <body>
     <h1 id="titre"> Niveau I programme b </h1>
+    <form>
+            <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
+            </form><br>
     <div class="centreniveau">
     <form method="POST" onSubmit="return submitForm()" >
     <table class="center" cellpadding="10"><br>
@@ -235,7 +238,7 @@
     <br>
     <form>
             <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
-            </form>
+            </form><br>
     </div>
     <script>
 		function increase(idelem) {

@@ -64,7 +64,7 @@
 				nombre++;
 				d = new Date();
 				date = d.toLocaleDateString()
-				var a = ["Séance n°"+nombre+" Niveau X Séance 1 le ", date, "\\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"+"\\n Exercice A6 : "+serieA6+" Séries de "+repA6+"\\n Exercice A7 : "+serieA7+" Séries de "+repA7+" Répétitions"+"\\n Exercice K1 : "+serieK1+" Séries de "+repK1+" Répétitions"+"\\n Exercice J : "+serieJ+" Séries de "+repJ+" Répétitions"+"\\n Exercice K : "+serieK+" Séries de "+repK+" Répétitions"+"\\n Exercice L : "+serieL+" Séries de "+repL+" Répétitions"+"\\n Exercice B1 : "+serieB1+" Séries de "+repB1+" Répétitions"+"\\n Exercice F : "+serieF+" Séries de "+repF+" Répétitions"+"\\n Exercice G : "+serieG+" Séries de "+repG+" Répétitions"+"\\n Exercice K2 : "+serieK2+" Séries de "+repK2+" Répétitions"+"\\n Exercice Z : "+serieZ+" Séries de "+repZ+" Répétitions"];
+				var a = ["Séance n°"+nombre+" Niveau X Séance 1 le ", date, "\\n Exercice B : "+serieB+" Séries de "+repB+" Répétitions"+"\\n Exercice A6 : "+serieA6+" Séries de "+repA6+" Répétitions"+"\\n Exercice A7 : "+serieA7+" Séries de "+repA7+" Répétitions"+"\\n Exercice K1 : "+serieK1+" Séries de "+repK1+" Répétitions"+"\\n Exercice J : "+serieJ+" Séries de "+repJ+" Répétitions"+"\\n Exercice K : "+serieK+" Séries de "+repK+" Répétitions"+"\\n Exercice L : "+serieL+" Séries de "+repL+" Répétitions"+"\\n Exercice B1 : "+serieB1+" Séries de "+repB1+" Répétitions"+"\\n Exercice F : "+serieF+" Séries de "+repF+" Répétitions"+"\\n Exercice G : "+serieG+" Séries de "+repG+" Répétitions"+"\\n Exercice K2 : "+serieK2+" Séries de "+repK2+" Répétitions"+"\\n Exercice Z : "+serieZ+" Séries de "+repZ+" Répétitions"];
 				localStorage.setItem("Sceance "+nombre, JSON.stringify(a));
 				var b = JSON.parse(localStorage.getItem("Sceance "+nombre));
 				localStorage.setItem("nbr", nombre);
@@ -76,7 +76,9 @@
         <title>NIVEAU 10 a</title>
     </head>
     <body>
-    <h1 id="titre"> Niveau X Séance 1</h1>
+    <h1 id="titre"> Niveau X Séance 1</h1><form>
+            <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
+            </form><br>
     <div class="centreniveau">
     <form method="POST" onSubmit="return submitForm()" >
     <table class="center" cellpadding="10"><br>
@@ -331,7 +333,7 @@
     <br>
     <form>
             <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
-            </form>
+            </form><br>
     </div>
     <script>
 		function increase(idelem) {
