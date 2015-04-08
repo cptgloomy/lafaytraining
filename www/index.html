@@ -50,36 +50,7 @@
         <link  href="niveau/niveau13b.html" />
         <title>LAFAY</title>
         <script src="js/jquery.js"></script>
-        <script>
-	// select the right Ad Id according to platform
-    var admobid = {};
-    if( /(android)/i.test(navigator.userAgent) ) { // for android
-        admobid = {
-            banner: 'ca-app-pub-5715551183312330/9935357603', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-5715551183312330/8730506004 '
-        };
-    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
-        admobid = {
-            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-xxx/kkk'
-        };
-    } else { // for windows phone
-        admobid = {
-            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-xxx/kkk'
-        };
-    }
-	function initApp() {
-    if (AdMob) {
-        AdMob.createBanner({
-            adId : admobid.banner,
-            position : AdMob.AD_POSITION.BOTTOM_CENTER,
-            autoShow : true
-        });
-    }
-}
-	document.addEventListener('deviceready', initApp, false);
-</script> 
+        
         <script>
 			function bShowHide_introduction(elemID)
 		{
@@ -232,28 +203,10 @@
             <div id="line1" class="ligne"> </div>
             <div  id="historique_content" class="content">
             </div>
-            <script>
- 	 if(AdMob) AdMob.createBanner( {
-    adId: admobid.banner, 
-    position: AdMob.AD_POSITION.TOP_CENTER, 
-    autoShow: true } );
-	</script>
+             
         </div>
        <script>
-		
-		
-				//localStorage.setItem("nbr", 3);
-				//d = new Date();
-				//date = d.toLocaleDateString()
-				//var a = ["Séance n°1 le", date, " \\n Exercice A : 5 séries de 4 répétiions \\n Exercice B : 6 séries de 2 répétitions \\n Exercice C : 2 séries de 1 répétitions"];
-				//var b = ["Séance n°2 le", date, " \\n Exercice A : 5 séries de 4 répétiions \\n Exercice B : 6 séries de 2 répétitions \\n Exercice C : 2 séries de 1 répétitions"];
-				//var c = ["Séance n°3 le", date, " \\n Exercice A : 5 séries de 4 répétiions \\n Exercice B : 6 séries de 2 répétitions \\n Exercice C : 2 séries de 1 répétitions"];
-				//localStorage.setItem("Sceance "+1, JSON.stringify(a));
-				//localStorage.setItem("Sceance "+2, JSON.stringify(b));
-				//localStorage.setItem("Sceance "+3, JSON.stringify(c));
-				//var b = JSON.parse(localStorage.getItem("Sceance "+1));
-				//var e = JSON.parse(localStorage.getItem("Sceance "+2));
-				//var f = JSON.parse(localStorage.getItem("Sceance "+3));
+	
 				var g = JSON.parse(localStorage.getItem("nbr"));
 				if (g<1){
 					jQuery('#historique_content').append('<div class="niveaucontent" style="text-decoration:none; color:white; display:block; " >Pas encore de séance en mémoire !</div> ');}
@@ -270,4 +223,43 @@
                     
 
     </body>
+      <script>
+        var enabledAdMob = true; // easily enable/disable AdMob
+        var admobid = {};
+        if( /(android)/i.test(navigator.userAgent) ) 
+        { 
+            admobid = { // for Android
+                banner: 'ca-app-pub-5715551183312330/9935357603 ', // or DFP format "/6253334/dfp_example_ad"
+                interstitial: 'ca-app-pub-xxx/yyy'
+            };
+        } 
+        else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) 
+        {
+            admobid = { // for iOS
+                banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
+                interstitial: 'ca-app-pub-xxx/kkk'
+            };
+        } 
+        else 
+        {
+            admobid = { // for Windows Phone
+                banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
+                interstitial: 'ca-app-pub-xxx/kkk'
+            };
+        }
+ 
+        function initApp() 
+        {
+            if (enabledAdMob) 
+            {
+                AdMob.createBanner({
+                    adId: admobid.banner,
+                    position: AdMob.AD_POSITION.BOTTOM_CENTER,
+                    autoShow: true
+                });
+            }
+        }
+ 
+        document.addEventListener('deviceready', initApp, false);  
+    </script>
 </html>
