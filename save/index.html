@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link  href="niveau/niveautest.html" />
+        <link  href="niveau/niveau1a.html" />
+        <link  href="niveau/niveau1b.html" />
+        <link  href="niveau/niveau2.html" />
+        <link  href="niveau/niveau3.html" />
+        <link  href="niveau/niveau4.html" />
+        <link  href="niveau/niveau5.html" />
+        <link  href="niveau/niveau6.html" />
+        <link  href="niveau/niveau7.html" />
+        <link  href="niveau/niveau8a.html" />
+        <link  href="niveau/niveau8b.html" />
+        <link  href="niveau/niveau9.html" />
+        <link  href="niveau/niveau10a.html" />
+        <link  href="niveau/niveau10b.html" />
+        <link  href="niveau/niveau11a.html" />
+        <link  href="niveau/niveau11b.html" />
+        <link  href="niveau/niveau12a.html" />
+        <link  href="niveau/niveau12b.html" />
+        <link  href="niveau/niveau13a.html" />
+        <link  href="niveau/niveau13b.html" />
+        <title>LAFAY</title>
+        <script src="js/jquery.js"></script>
+        
+        <script>
+			function bShowHide_introduction(elemID)
+		{
+			document.getElementById("commencer_content").style.display="none"
+			document.getElementById("historique_content").style.display="none"
+			var e = document.getElementById(elemID);
+			var dStyle = ((e.style.display == '' || e.style.display == 'none') ? 'block':'none');
+			e.style.display = dStyle;
+		}
+		function bShowHide_commencer(elemID)
+		{
+			document.getElementById("introduction_content").style.display="none"
+			document.getElementById("historique_content").style.display="none"
+			var e = document.getElementById(elemID);
+			var dStyle = ((e.style.display == '' || e.style.display == 'none') ? 'block':'none');
+			e.style.display = dStyle;
+		}
+		function bShowHide_historique(elemID)
+		{
+			document.getElementById("introduction_content").style.display="none"
+			document.getElementById("commencer_content").style.display="none"
+			var e = document.getElementById(elemID);
+			var dStyle = ((e.style.display == '' || e.style.display == 'none') ? 'block':'none');
+			e.style.display = dStyle;
+		}
+		function bShowHide(elemID)
+		{
+			var e = document.getElementById(elemID);
+			var dStyle = ((e.style.display == '' || e.style.display == 'none') ? 'block':'none');
+			e.style.display = dStyle;
+		}
+		</script>
+        
+        <script>
+				var g = JSON.parse(localStorage.getItem("nbr"));
+				if (g<1){
+					jQuery('#historique_content').append('<div class="niveaucontent" style="text-decoration:none; color:white; display:block; " >Pas encore de séance en mémoire !</div> ');}
+				else{
+				for (i=1;i<=g; i++){
+					var session = JSON.parse(localStorage.getItem("Sceance "+i));
+					jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontent" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:block; " >Séance '+i+' le '+session[1]+'</div> ');
+					if (i<g){
+					jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
+					}}}
+					
+				                     
+					</script>
+                    
+    </head>
+    <body>
+		<div id="home"> 
+  
+        <div id="logo">
+        CARNET <br>LAFAY</div>
+         </div>
+		<div id="page">
+        
+            <div id="introduction_titre" class="titre"> 
+                <a href="#home" style="text-decoration:none; color:white; display:block;width:100%;height:100%; " onClick="bShowHide_introduction('introduction_content');">
+                    <p>INTRODUCTION</p>
+                 </a>
+            </div>
+            <div id="line1" class="ligne"> </div>
+            <div  id="introduction_content" class="intro">
+                <div style="padding:2% 10%;"><p>Bienvenue et merci d'utiliser cette application Carnet Lafay.<br> Cette application  est destinée à vous accompagner pendant votre progression.<br> Elle ne remplace pas le livre mais se base sur les exercices par niveau et vous permet de suivre simplement vos scéances et de toujours les garder en mémoire. <br> Vous pouvez, à chaque scéance, indiquer vos résultats (répétitions et séries par exercice) et les sauvegarder.<br></p>
+                </div>
+            </div>
+            
+             <div id="commencer_titre" class="titre"> 
+                <a href="#home" style="text-decoration:none; color:white; display:block;width:100%;height:100%; " onClick="bShowHide_commencer('commencer_content');">
+                    <p>COMMENCER</p>
+                 </a>
+            </div>
+            <div id="line1" class="ligne"> </div>
+            <div  id="commencer_content" class="content">
+            <a href="niveau/niveautest.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU TEST
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau1a.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 1 Programme A
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau1b.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 1 Programme B
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau2.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 2
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau3.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 3
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau4.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 4
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau5.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 5
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau6.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 6
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau7.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 7
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau8a.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 8 Séance 1
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau8b.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 8 Séance 2
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau9.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 9
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau10a.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 10 Séance 1
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau10b.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 10 Séance 2
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau11a.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 11 Séance 1
+                </a>
+                 <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau11b.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 11 Séance 2
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau12a.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 12 Séance 1
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau12b.html" class="niveaucontent"style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 12 Séance 2
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau13a.html" class="niveaucontent" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 13 Séance 1
+                </a>
+                <div id="line1" class="lignecontent"> </div>
+                <a href="niveau/niveau13b.html" class="niveaucontent" style="text-decoration:none; color:white; display:block;width:100%;height:100%;">
+                	NIVEAU 13 Séance 2
+                </a>
+                
+                
+            </div>
+            
+             <div id="historique_titre" class="titre"> 
+                <a href="#home" style="text-decoration:none; color:white; display:block;width:100%;height:100%; " onClick="bShowHide_historique('historique_content');">
+                    <p>HISTORIQUE</p>
+                 </a>
+            </div>
+            <div id="line1" class="ligne"> </div>
+            <div  id="historique_content" class="content">
+            Pas encore de séance en mémoire ! 
+            </div>
+           
+        </div>
+     
+       
+    </body>
+</html>
