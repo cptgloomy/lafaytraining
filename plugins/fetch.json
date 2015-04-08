@@ -1,0 +1,8 @@
+{
+    "com.rjfun.cordova.plugin.admob": {
+        "source": {
+            "type": "registry",
+            "id": "com.rjfun.cordova.plugin.admob"
+        }
+    }
+}
