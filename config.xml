@@ -1,7 +1,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.cptgloomy.lafay" version="0.9.5">
-  <name>Carnet Lafay</name>
+  <name>Carnet MusculationS</name>
   <description>Application de suivi pour la méthode Lafay</description>
-  <author href="http://www.antoined.com" email="cptgloomy@gmailcom">Captain Gloomy</author>
+  <author href="http://www.cptgloomy.com" email="cptgloomy@gmailcom">Captain Gloomy</author>
   <content src="index.html"/>
   
   <preference name="permissions" value="none"/>
@@ -24,14 +24,11 @@
   <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
   
   
-  <gap:plugin name="org.apache.cordova.device"/>
-  <gap:plugin name="org.apache.cordova.device-motion"/>
 
   <gap:plugin name="org.apache.cordova.dialogs"/>
   <gap:plugin name="org.apache.cordova.file"/>
   <gap:plugin name="org.apache.cordova.file-transfer"/>
 
-  <gap:plugin name="org.apache.cordova.media"/>
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   
