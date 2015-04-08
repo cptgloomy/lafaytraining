@@ -1,10 +1,9 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.cptgloomy.lafay" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.cptgloomy.lafay" version="0.9.5">
   <name>Carnet Lafay</name>
   <description>Application de suivi pour la méthode Lafay</description>
   <author href="http://phonegap.com" email="support@phonegap.com">Captain Gloomy</author>
   <content src="index.html"/>
-  <preference name="permissions" value="none"/>
-  <preference name="orientation" value="default"/>
+  <preference name="orientation" value="portrait" />
   <preference name="target-device" value="universal"/>
   <preference name="fullscreen" value="true"/>
   <preference name="webviewbounce" value="true"/>
