@@ -50,7 +50,36 @@
         <link  href="niveau/niveau13b.html" />
         <title>LAFAY</title>
         <script src="js/jquery.js"></script>
-        
+        <script>
+	// select the right Ad Id according to platform
+    var admobid = {};
+    if( /(android)/i.test(navigator.userAgent) ) { // for android
+        admobid = {
+            banner: 'ca-app-pub-5715551183312330/9935357603', // or DFP format "/6253334/dfp_example_ad"
+            interstitial: 'ca-app-pub-5715551183312330/8730506004 '
+        };
+    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
+        admobid = {
+            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
+            interstitial: 'ca-app-pub-xxx/kkk'
+        };
+    } else { // for windows phone
+        admobid = {
+            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
+            interstitial: 'ca-app-pub-xxx/kkk'
+        };
+    }
+	function initApp() {
+    if (AdMob) {
+        AdMob.createBanner({
+            adId : admobid.banner,
+            position : AdMob.AD_POSITION.BOTTOM_CENTER,
+            autoShow : true
+        });
+    }
+}
+	document.addEventListener('deviceready', initApp, false);
+</script> 
         <script>
 			function bShowHide_introduction(elemID)
 		{
@@ -233,45 +262,7 @@
 					
 				                     
 					</script>
-                    <script>
-	// select the right Ad Id according to platform
-    var admobid = {};
-    if( /(android)/i.test(navigator.userAgent) ) { // for android
-        admobid = {
-            banner: 'ca-app-pub-5715551183312330/9935357603', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-5715551183312330/8730506004 '
-        };
-    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
-        admobid = {
-            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-xxx/kkk'
-        };
-    } else { // for windows phone
-        admobid = {
-            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-xxx/kkk'
-        };
-    }
-	function initApp() {
-    if (AdMob) {
-        AdMob.createBanner({
-            adId : admobid.banner,
-            position : AdMob.AD_POSITION.BOTTOM_CENTER,
-            autoShow : true
-        });
-    }
-}
-	document.addEventListener('deviceready', initApp, false);
-</script> 
-<!--<script>
-function initApp() {
-    if (AdMob) {
-        AdMob.createBanner({
-            adId : admobid.banner,
-            position : AdMob.AD_POSITION.BOTTOM_CENTER,
-            autoShow : true
-        });
-    }
-}</script>-->
+                    
+
     </body>
 </html>
