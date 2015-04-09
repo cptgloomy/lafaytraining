@@ -90,11 +90,7 @@
 					
 					var answer = confirm ("Etes vous sur de vouloir supprimer cette session ?") ;
 					if(answer){
-					
-						window.localStorage.removeItem(itemee);
-						var g = JSON.parse(localStorage.getItem("nbr"));
-						g--;
-						localStorage.setItem("nbr", g);
+						localStorage.removeItem(itemee);
 						location.reload();
 					}}
 	</script>
@@ -221,19 +217,28 @@
        <script>
 	
 				var g = JSON.parse(localStorage.getItem("nbr"));
+				var c = 0;
 				if (g<1){
 					jQuery('#historique_content').append('<div class="niveaucontent" style="text-decoration:none; color:white; display:block; " >Pas encore de séance en mémoire !</div> ');}
 				else{
 				for (i=1;i<=g; i++){
-					var session = JSON.parse(localStorage.getItem("Sceance "+i));
-					jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontentsup" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:inline-block; " >Séance '+i+' le '+session[1]+'</div> ');
-					jQuery('#historique_content').append('<div  id="seancedel'+i+'" class="niveaucontentdel" onclick="suppr(\'Sceance '+i+'\');" style="text-decoration:none; color:white; display:inline-block; " ><div class="supr" style="width:100%;height:100%;">Supprimer</div></div> ');
+					
+						if (localStorage.getItem("Sceance "+i)){
+							var session = JSON.parse(localStorage.getItem("Sceance "+i));
+							jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontentsup" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:inline-block; " >Séance '+i+' le '+session[1]+'</div> ');
+							jQuery('#historique_content').append('<div  id="seancedel'+i+'" class="niveaucontentdel" onclick="suppr(\'Sceance '+i+'\');" style="text-decoration:none; color:white; display:inline-block; " ><div class="supr" style="width:100%;height:100%;">Supprimer</div></div> ');
+							jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
+							c++;
+							
+						}
+						else{
+						
+						}
 					
 					
-					
-					if (i<g){
-					jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
-					}}}
+					}if (c==0){
+						jQuery('#historique_content').append('<div class="niveaucontent" style="text-decoration:none; color:white; display:block; " >Pas encore de séance en mémoire !</div> ');
+					}}
 					
 				                     
 					</script>
