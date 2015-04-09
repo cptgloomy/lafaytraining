@@ -225,8 +225,8 @@
 					
 						if (localStorage.getItem("Sceance "+i)){
 							var session = JSON.parse(localStorage.getItem("Sceance "+i));
-							jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontentsup" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:inline-block; " >Séance '+i+' le '+session[1]+'</div> ');
-							jQuery('#historique_content').append('<div  id="seancedel'+i+'" class="niveaucontentdel" onclick="suppr(\'Sceance '+i+'\');" style="text-decoration:none; color:white; display:inline-block; " ><div class="supr" style="width:100%;height:100%;">Supprimer</div></div> ');
+							jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontentsup" onclick="alert(\''+session+'\');" style="text-decoration:none; display:inline-block; " >Séance '+i+' le '+session[1]+'</div> ');
+							jQuery('#historique_content').append('<div  id="seancedel'+i+'" class="niveaucontentdel" onclick="suppr(\'Sceance '+i+'\');" style="text-decoration:none;  display:inline-block; " ><div class="supr" style="width:100%;height:100%;">Supprimer</div></div> ');
 							jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
 							c++;
 							
