@@ -84,6 +84,20 @@
 			e.style.display = dStyle;
 		}
 		</script>
+         <script>
+					function suppr(itemee){	
+					
+					
+					var answer = confirm ("Etes vous sur de vouloir supprimer cette session ?") ;
+					if(answer){
+					
+						window.localStorage.removeItem(itemee);
+						var g = JSON.parse(localStorage.getItem("nbr"));
+						g--;
+						localStorage.setItem("nbr", g);
+						location.reload();
+					}}
+	</script>
     </head>
     <body>
 		<div id="home"> 
@@ -212,13 +226,18 @@
 				else{
 				for (i=1;i<=g; i++){
 					var session = JSON.parse(localStorage.getItem("Sceance "+i));
-					jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontent" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:block; " >Séance '+i+' le '+session[1]+'</div> ');
+					jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontentsup" onclick="alert(\''+session+'\');" style="text-decoration:none; color:white; display:inline-block; " >Séance '+i+' le '+session[1]+'</div> ');
+					jQuery('#historique_content').append('<div  id="seancedel'+i+'" class="niveaucontentdel" onclick="suppr(\'Sceance '+i+'\');" style="text-decoration:none; color:white; display:inline-block; " ><div class="supr" style="width:100%;height:100%;">Supprimer</div></div> ');
+					
+					
+					
 					if (i<g){
 					jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
 					}}}
 					
 				                     
 					</script>
+                   
                     
 
     </body>

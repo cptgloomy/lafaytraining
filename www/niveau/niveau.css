@@ -8,7 +8,7 @@ table
     border-collapse: collapse;
 
 }
-form{font-size:2em;}
+form{font-size:3em;}
 td
 {
     border: 1px solid black;
@@ -19,6 +19,7 @@ td
 	background-image:url(img/retina_wood.png);
 
 	font-family: 'Oswald', sans-serif;
+	font-size:0.7em;;
 	
 }
 body{
