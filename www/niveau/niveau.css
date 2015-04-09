@@ -1,6 +1,7 @@
 table.center {
     margin-left:auto; 
     margin-right:auto;
+	font-size:0.7em;;
 
   }
 table
@@ -19,7 +20,7 @@ td
 	background-image:url(img/retina_wood.png);
 
 	font-family: 'Oswald', sans-serif;
-	font-size:0.7em;;
+	
 	
 }
 body{
