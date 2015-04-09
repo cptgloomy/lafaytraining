@@ -111,18 +111,28 @@ body {
 .niveaucontentsup{
 	padding: 20px 20px;
 	font-size:2.5em;
-
-}.niveaucontentdel{
-
-	padding: 20px 20px;
-	font-size:2em;
-
-}
-.supr{
 	color:black;
 	background-color:silver;
 	padding:5px;
 	border-radius:3px;
 	border-color:black;
 	border-type:solid;
+	box-shadow: 0.1em 0.1em 0.1em black;
+
+}.niveaucontentdel{
+
+	padding: 20px 20px;
+	font-size:2em;
+
+	
+
+}
+.supr{
+color:white;
+	background-color:rgba(51,51,102,1);
+	padding:5px;
+	border-radius:3px;
+	border-color:white;
+	border-type:solid;
+	box-shadow: 0.1em 0.1em 0.1em black;
 }
