@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.cptgloomy.lafay" version="0.9.6">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.cptgloomy.lafay" version="0.9.7">
   <name>Carnet Musculation</name>
   <description>Application de suivi pour la méthode Lafay</description>
   <author href="http://www.cptgloomy.com" email="cptgloomy@gmailcom">Captain Gloomy</author>
