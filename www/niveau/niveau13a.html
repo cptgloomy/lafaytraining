@@ -37,32 +37,32 @@
         <script type="text/javascript">
 			function submitForm() {
 				serieE6 = serieE6.innerHTML;
-				repE6 = repE6.innerHTML;
+				repE6 = E6.innerHTML;
 				serieF = serieF.innerHTML;
-				repF = repF.innerHTML;
+				repF = F.innerHTML;
 				serieHG = serieHG.innerHTML;
-				repHG = repHG.innerHTML;
+				repHG = HG.innerHTML;
 				serieE7 = serieE7.innerHTML;
-				repE7 = repE7.innerHTML;
+				repE7 = E7.innerHTML;
 				serieT = serieT.innerHTML;
-				repT = repT.innerHTML;
+				repT = T.innerHTML;
 				serieW = serieW.innerHTML;
-				repW = repW.innerHTML;
+				repW = W.innerHTML;
 				serieMJ1 = serieMJ1.innerHTML;
-				repMJ1 = repMJ1.innerHTML;
+				repMJ1 = MJ1.innerHTML;
 				serieE5 = serieE5.innerHTML;
-				repE5 = repE5.innerHTML;
+				repE5 = E5.innerHTML;
 				
 				serieV = serieV.innerHTML;
-				repV = repV.innerHTML;
+				repV = V.innerHTML;
 				serieK2 = serieK2.innerHTML;
-				repK2 = repK2.innerHTML;
+				repK2 = K2.innerHTML;
 				serieK1 = serieK1.innerHTML;
-				repK1 = repK1.innerHTML;
+				repK1 = K1.innerHTML;
 				serieK = serieK.innerHTML;
-				repK = repK.innerHTML;
+				repK = K.innerHTML;
 				serieE7b = serieE7b.innerHTML;
-				repE7b = repE7b.innerHTML;
+				repE7b = E7b.innerHTML;
 				var nombre = JSON.parse(localStorage.getItem("nbr"))
 				nombre++;
 				d = new Date();
@@ -87,38 +87,36 @@
     <table class="center" cellpadding="10"><br>
    				<tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
                 <tr>
        				<td>E6</td>
-       				<td><span id="serieE6">0</span>/1</td>
-                    <td><div href="" onclick="increase('serieE6');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieE6');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repE6">0</span></td>
+       				<td><span id="serieE6" style="color:red;">0</span>/1</td>
+                
+       				<td><div style="display:inline;">Fait: </div><div id="E6" style="display:inline;">-</div><br><span id="repE6" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repE6');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repE6');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieE6');valider('E6');">Valider</div></td>
    			</tr>
         </table>
         
     <table class="center" cellpadding="10"><br>
    				<tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
                 <tr>
        				<td>F</td>
-       				<td><span id="serieF">0</span>/5</td>
-                    <td><div href="" onclick="increase('serieF');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieF');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repF">0</span></td>
+       				<td><span id="serieF" style="color:red;">0</span>/5</td>
+               
+       				<td><div style="display:inline;">Fait: </div><div id="F" style="display:inline;">-</div><br><span id="repF" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repF');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repF');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>25"</td>
+                    <td>25"</td><td><div class="valider" onclick="increase('serieF');valider('F');">Valider</div></td>
    			</tr>
         </table>
         <div style="margin:auto auto;">recuperation : 2'30</div>
@@ -127,37 +125,35 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>HG</td>
-       				<td><span id="serieHG">0</span>/5</td>
-                    <td><div href="" onclick="increase('serieHG');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieHG');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repHG">0</span></td>
+       				<td><span id="serieHG" style="color:red;">0</span>/5</td>
+                 
+       				<td><div style="display:inline;">Fait: </div><div id="HG" style="display:inline;">-</div><br><span id="repHG" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repHG');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repHG');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>0</td>
+                    <td>0</td><td><div class="valider" onclick="increase('serieHG');valider('HG');">Valider</div></td>
    				</tr>
                 </table>
                  <div style="margin:auto auto;">recuperation : 1'30</div>
                 <table class="center" cellpadding="10"><br>
    				<tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
                 <tr>
        				<td>E7</td>
-       				<td><span id="serieE7">0</span>/4</td>
-                    <td><div href="" onclick="increase('serieE7');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieE7');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repE7">0</span></td>
+       				<td><span id="serieE7" style="color:red;">0</span>/4</td>
+                 
+       				<td><div style="display:inline;">Fait: </div><div id="E7" style="display:inline;">-</div><br><span id="repE7" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repE7');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repE7');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieE7');valider('E7');">Valider</div></td>
    			</tr>
         </table>
         <div style="margin:auto auto;">recuperation : 2'30</div>
@@ -167,18 +163,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>T</td>
-       				<td><span id="serieT">0</span>/1</td>
-                    <td><div href="" onclick="increase('serieT');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieT');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repT">0</span></td>
+       				<td><span id="serieT" style="color:red;">0</span>/1</td>
+                  
+       				<td><div style="display:inline;">Fait: </div><div id="T" style="display:inline;">-</div><br><span id="repT" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repT');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repT');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieT');valider('T');">Valider</div></td>
    				</tr>
                 </table>
                 <table class="center" cellpadding="10"><br>
@@ -186,18 +181,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>W</td>
-       				<td><span id="serieW">0</span>/4</td>
-                    <td><div href="" onclick="increase('serieW');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieW');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repW">0</span></td>
+       				<td><span id="serieW" style="color:red;">0</span>/4</td>
+                
+       				<td><div style="display:inline;">Fait: </div><div id="W" style="display:inline;">-</div><br><span id="repW" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repW');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repW');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>30"</td>
+                    <td>30"</td><td><div class="valider" onclick="increase('serieW');valider('W');">Valider</div></td>
    				</tr>
                 </table>
                  <div style="margin:auto auto;">recuperation : 1'00</div>
@@ -206,18 +200,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>MJ1</td>
-       				<td><span id="serieMJ1">0</span>/5</td>
-                    <td><div href="" onclick="increase('serieMJ1');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieMJ1');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repMJ1">0</span></td>
+       				<td><span id="serieMJ1" style="color:red;">0</span>/5</td>
+                 
+       				<td><div style="display:inline;">Fait: </div><div id="MJ1" style="display:inline;">-</div><br><span id="repMJ1" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repMJ1');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repMJ1');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>15"</td>
+                    <td>15"</td><td><div class="valider" onclick="increase('serieMJ1');valider('MJ1');">Valider</div></td>
    				</tr>
                 </table>
                  <div style="margin:auto auto;">recuperation : 2'00</div>
@@ -226,18 +219,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>E5</td>
-       				<td><span id="serieE5">0</span>/1</td>
-                    <td><div href="" onclick="increase('serieE5');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieE5');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repE5">0</span></td>
+       				<td><span id="serieE5" style="color:red;">0</span>/1</td>
+                 
+       				<td><div style="display:inline;">Fait: </div><div id="E5" style="display:inline;">-</div><br><span id="repE5" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repE5');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repE5');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieE5');valider('E5');">Valider</div></td>
    				</tr>
                 </table>
               
@@ -247,18 +239,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>V</td>
-       				<td><span id="serieV">0</span>/1</td>
-                    <td><div href="" onclick="increase('serieV');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieV');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repV">0</span></td>
+       				<td><span id="serieV" style="color:red;">0</span>/1</td>
+                 
+       				<td><div style="display:inline;">Fait: </div><div id="V" style="display:inline;">-</div><br><span id="repV" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repV');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repV');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieV');valider('V');">Valider</div></td>
    				</tr>
                 </table>
         <table class="center" cellpadding="10"><br>
@@ -266,18 +257,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>K2</td>
-       				<td><span id="serieK2">0</span>/4</td>
-                    <td><div href="" onclick="increase('serieK2');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieK2');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repK2">0</span></td>
+       				<td><span id="serieK2" style="color:red;">0</span>/4</td>
+                 
+       				<td><div style="display:inline;">Fait: </div><div id="K2" style="display:inline;">-</div><br><span id="repK2" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repK2');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repK2');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieK2');valider('K2');">Valider</div></td>
    				</tr>
                 </table>
                 <div style="margin:auto auto;">recuperation : 1'00</div>
@@ -286,18 +276,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>K1</td>
-       				<td><span id="serieK1">0</span>/2</td>
-                    <td><div href="" onclick="increase('serieK1');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieK1');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repK1">0</span></td>
+       				<td><span id="serieK1" style="color:red;">0</span>/2</td>
+              
+       				<td><div style="display:inline;">Fait: </div><div id="K1" style="display:inline;">-</div><br><span id="repK1" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repK1');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repK1');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieK1');valider('K1');">Valider</div></td>
    				</tr>
                 </table>
                 <div style="margin:auto auto;">recuperation : 1'00</div>
@@ -306,18 +295,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>K</td>
-       				<td><span id="serieK">0</span>/1</td>
-                    <td><div href="" onclick="increase('serieK');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieK');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repK">0</span></td>
+       				<td><span id="serieK" style="color:red;">0</span>/1</td>
+                  
+       				<td><div style="display:inline;">Fait: </div><div id="K" style="display:inline;">-</div><br><span id="repK" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repK');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repK');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>2'00</td>
+                    <td>2'00</td><td><div class="valider" onclick="increase('serieK');valider('K');">Valider</div></td>
    				</tr>
                 </table>
         
@@ -326,18 +314,17 @@
                <tr>
                <tr>
        				<td>EXERCICE</td>
-       				<td colspan="2">SERIES</td>
+       				<td colspan="1">SERIES</td>
        				<td colspan="2">REPETITIONS</td>
                     <td>RECUP</td>
    				</tr>
        				<td>E7b</td>
-       				<td><span id="serieE7b">0</span>/4</td>
-                    <td><div href="" onclick="increase('serieE7b');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                    <div href="" onclick="decrease('serieE7b');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-       				<td><span id="repE7b">0</span></td>
+       				<td><span id="serieE7b" style="color:red;">0</span>/4</td>
+                
+       				<td><div style="display:inline;">Fait: </div><div id="E7b" style="display:inline;">-</div><br><span id="repE7b" style="color:red;">0</span></td>
                     <td><div href="" onclick="increase('repE7b');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                     <div href="" onclick="decrease('repE7b');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                    <td>1'00</td>
+                    <td>1'00</td><td><div class="valider" onclick="increase('serieE7b');valider('E7b');">Valider</div></td>
    				</tr>
                 
     </table>
@@ -363,7 +350,15 @@
     var number = serieA.innerHTML;
     number--;
     serieA.innerHTML = number;
-}
+}function valider(idelem) {
+			var div = document.getElementById(idelem)
+			var rep = document.getElementById('rep'+idelem);
+			var number = rep.innerHTML;
+			if(div.innerHTML=="-"){
+				div.innerHTML =number;}
+				else{div.innerHTML=div.innerHTML +', '+ number;}
+			rep.innerHTML = 0;
+		}
 	</script>
     </body>
     <script>

@@ -35,13 +35,13 @@
         <script type="text/javascript">
 			function submitForm() {
 				serieA = serieA.innerHTML;
-				repA = repA.innerHTML;
+				repA = A.innerHTML;
 				serieB = serieB.innerHTML;
-				repB = repB.innerHTML;
+				repB = B.innerHTML;
 				serieC = serieC.innerHTML;
-				repC = repC.innerHTML;
+				repC = C.innerHTML;
 				serieA1 = serieA1.innerHTML;
-				repA1 = repA1.innerHTML;
+				repA1 = A1.innerHTML;
 				var nombre = JSON.parse(localStorage.getItem("nbr"))
 				nombre++;
 				d = new Date();
@@ -71,49 +71,52 @@
                 <table class="center" cellpadding="10"><br>
                             <tr>
                                 <td>EXERCICE</td>
-                                <td colspan="2">SERIES</td>
+                                <td colspan="1">SERIES</td>
                                 <td colspan="2">REPETITIONS</td>
                                 <td>RECUP</td>
                             </tr>
                             <tr>
                                 <td>A</td>
-                                <td><span id="serieA">0</span>/1</td>
-                                <td><div href="" onclick="increase('serieA');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                                <div href="" onclick="decrease('serieA');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                                <td><span id="repA">0</span></td>
+                                <td><span id="serieA" style="color:red;">0</span>/1</td>
+                                
+                                <td><div style="display:inline;">Fait: </div><div id="A" style="display:inline;">-</div><br><span id="repA" style="color:red;">0</span></td>
                                 <td><div href="" onclick="increase('repA');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
+                                
                                 <div href="" onclick="decrease('repA');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
                                 <td>3'00</td>
+                                
+                                <td><div class="valider" onclick="increase('serieA');valider('A');">Valider</div></td>
                             </tr>
                            <tr>
                                 <td>B</td>
-                                <td><span id="serieB">0</span>/1</td>
-                                <td><div href="" onclick="increase('serieB');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                                <div href="" onclick="decrease('serieB');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                                <td><span id="repB">0</span></td>
+                                <td><span id="serieB" style="color:red;">0</span>/1</td>
+                                
+                                
+                                <td><div style="display:inline;">Fait: </div><div id="B" style="display:inline;">-</div><br><span id="repB" style="color:red;">0</span></td>
                                 <td><div href="" onclick="increase('repB');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                                 <div href="" onclick="decrease('repB');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
                                 <td>3'00</td>
+                                <td><div class="valider" onclick="increase('serieB');valider('B');">Valider</div></td>
                             </tr>
                             <tr>
                                 <td>C</td>
-                                <td><span id="serieC">0</span>/1</td>
-                                <td><div href="" onclick="increase('serieC');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                                <div href="" onclick="decrease('serieC');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                                <td><span id="repC">0</span></td>
+                                <td><span id="serieC" style="color:red;">0</span>/1</td>
+                                
+                                <td><div style="display:inline;">Fait: </div><div id="C" style="display:inline;">-</div><br><span id="repC" style="color:red;">0</span></td>
                                 <td><div href="" onclick="increase('repC');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                                 <div href="" onclick="decrease('repC');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
                                 <td>3'00</td>
+                                <td><div class="valider" onclick="increase('serieC');valider('C');">Valider</div></td>
                             </tr>
                             <tr>
                                 <td>A1</td>
-                                <td><span id="serieA1">0</span>/1</td>
-                                <td><div href="" onclick="increase('serieA1');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
-                                <div href="" onclick="decrease('serieA1');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
-                                <td><span id="repA1">0</span></td>
+                                <td><span id="serieA1" style="color:red;">0</span>/1</td>
+                                
+                                <td><div style="display:inline;">Fait: </div><div id="A1" style="display:inline;">-</div><br><span id="repA1" style="color:red;">0</span></td>
                                 <td><div href="" onclick="increase('repA1');"><img src="img/plus.png" style="height:80px; padding:5px;"/></div>
                                 <div href="" onclick="decrease('repA1');"><img src="img/minus.png" style="height:80px; padding:5px;"/></div></td>
                                 <td>3'00</td>
+                                <td><div class="valider" onclick="increase('serieA1');valider('A1');">Valider</div></td>
                             </tr>
                             
                 </table>
@@ -139,6 +142,15 @@
 			var number = serieA.innerHTML;
 			number--;
 			serieA.innerHTML = number;
+		}
+		function valider(idelem) {
+			var div = document.getElementById(idelem)
+			var rep = document.getElementById('rep'+idelem);
+			var number = rep.innerHTML;
+			if(div.innerHTML=="-"){
+				div.innerHTML =number;}
+				else{div.innerHTML=div.innerHTML +', '+ number;}
+			rep.innerHTML = 0;
 		}
 	</script>
     	
