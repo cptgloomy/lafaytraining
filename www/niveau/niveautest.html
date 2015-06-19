@@ -56,6 +56,12 @@
 			function returnhome() {
 				document.location.href = '../index.html';
 			}
+			function bShowHide_historique(elemID)
+		{
+			var e = document.getElementById(elemID);
+			var dStyle = ((e.style.display == '' || e.style.display == 'none') ? 'block':'none');
+			e.style.display = dStyle;
+		}
 			</script>
         <title>NIVEAU TEST</title>
     </head>
@@ -65,7 +71,75 @@
    		</div>
         <form>
             <input type="button" onclick="returnhome();" value="Revenir à l'acceuil">
-            </form><br>
+            </form><br><div style="text-align:center; border-style:solid; border-radius:1em;border-width:0.1em;background-color:rgba(0,0,0,0.1);padding:0.2em;font-size:2em;">
+Chronomètre
+<p><span id="seconds">00</span>:<span id="tens">00</span></p>
+<button id="button-start">Start   </button>
+<button id="button-stop">Stop   </button>
+<button id="button-reset">Reset</button>
+</div> 
+<script>
+window.onload = function () {
+  
+  var seconds = 00; 
+  var tens = 00; 
+  var appendTens = document.getElementById("tens")
+  var appendSeconds = document.getElementById("seconds")
+  var buttonStart = document.getElementById('button-start');
+  var buttonStop = document.getElementById('button-stop');
+  var buttonReset = document.getElementById('button-reset');
+  var Interval ;
+
+  buttonStart.onclick = function() {
+    
+     clearInterval(Interval);
+     Interval = setInterval(startTimer, 10);
+  }
+  
+    buttonStop.onclick = function() {
+       clearInterval(Interval);
+  }
+  
+
+  buttonReset.onclick = function() {
+     clearInterval(Interval);
+    tens = "00";
+  	seconds = "00";
+    appendTens.innerHTML = tens;
+  	appendSeconds.innerHTML = seconds;
+  }
+  
+   
+  
+  function startTimer () {
+    tens++; 
+    
+    if(tens < 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+    
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+      
+    } 
+    
+    if (tens > 99) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+    
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+  
+  }
+  
+
+}
+</script>
     	<div class="centreniveau">
             <form method="POST" onSubmit="return submitForm()" >
                 <table class="center" cellpadding="10"><br>
@@ -129,6 +203,14 @@
             </form>
             <br>
     </div>
+    <div id="historique_titre" class="titre"> 
+                <a href="#home" style="text-decoration:none; color:white; display:block;width:100%;height:100%; " onClick="bShowHide_historique('historique_content');">
+                    <p>HISTORIQUE</p>
+                 </a>
+            </div>
+            <div id="line1" class="ligne"> </div>
+            <div  id="historique_content" class="content">
+            </div>
     <script>
 		function increase(idelem) {
 			var serieA = document.getElementById(idelem);
@@ -195,4 +277,32 @@
  
         document.addEventListener('deviceready', initApp, false);  
     </script>
+      <script>
+	
+				var g = JSON.parse(localStorage.getItem("nbr"));
+				var c = 0;
+				if (g<1){
+					jQuery('#historique_content').append('<div class="niveaucontent" style="text-decoration:none; color:white; display:block; " >Pas encore de séance en mémoire !</div> ');}
+				else{
+				for (i=1;i<=g; i++){
+					
+						if (localStorage.getItem("Sceance "+i)){
+							var session = JSON.parse(localStorage.getItem("Sceance "+i));
+							jQuery('#historique_content').append('<div  id="seance'+i+'" class="niveaucontentsup" onclick="alert(\''+session+'\');" style="text-decoration:none; display:inline-block; " >Séance '+i+' le '+session[1]+'</div> ');
+							jQuery('#historique_content').append('<div  id="seancedel'+i+'" class="niveaucontentdel" onclick="suppr(\'Sceance '+i+'\');" style="text-decoration:none;  display:inline-block; " ><div class="supr" style="width:100%;height:100%;">Supprimer</div></div> ');
+							jQuery('#historique_content').append('<div id="line1" class="lignecontent"> </div>');
+							c++;
+							
+						}
+						else{
+						
+						}
+					
+					
+					}if (c==0){
+						jQuery('#historique_content').append('<div class="niveaucontent" style="text-decoration:none; color:white; display:block; " >Pas encore de séance en mémoire !</div> ');
+					}}
+					
+				                     
+					</script>
 </html>
