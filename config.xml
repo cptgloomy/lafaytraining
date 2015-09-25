@@ -1,4 +1,4 @@
-﻿<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/4.0" id="com.cptgloomy.lafay" version="0.9.8">
+﻿<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/4.0" id="com.cptgloomy.lafay" version="0.9.82">
   <name>Carnet Musculation</name>
   <description>Application de suivi pour la méthode Lafay</description>
   <author href="http://www.cptgloomy.com" email="cptgloomy@gmailcom">Captain Gloomy</author>
@@ -21,15 +21,21 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-<gap:plugin name="com.admob.google" source="plugins.cordova.io" version="2.0.14"/>  
+  <gap:plugin name="com.admob.google" source="plugins.cordova.io" version="2.0.14"/>
   
+
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
   <icon src="www/res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:qualifier="hdpi"/>
   <icon src="www/res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi"/>
+ 
+  <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
+  <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
+  <gap:splash src="www/res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
+  <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi"/>
   
-  <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
+ <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
 <gap:plugin name="org.apache.cordova.camera" source="npm" />
 <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
 <gap:plugin name="org.apache.cordova.console" source="npm" />
@@ -47,7 +53,6 @@
 <gap:plugin name="org.apache.cordova.network-information" source="npm" />
 <gap:plugin name="org.apache.cordova.splashscreen" source="npm"/>
 <gap:plugin name="org.apache.cordova.vibration" source="npm" />
-
- 
+  
   <access origin="*"/>
 </widget>
